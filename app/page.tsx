@@ -33,7 +33,7 @@ export default function LandingPage() {
           <div className="container mx-auto flex flex-col items-center text-center">
             <div className="space-y-4 max-w-3xl">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 p-3">
-                The Future of Group Riding is Coming!
+                The Future of Group Riding is Coming
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl dark:text-gray-300">
                 Navik is revolutionizing the way motorcycle enthusiasts connect,
@@ -116,7 +116,7 @@ export default function LandingPage() {
       <footer className="py-6 px-4 border-t border-gray-200 dark:border-gray-800">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            © 2024 Navik. All rights reserved.
+            © {new Date().getFullYear()} Navik. All rights reserved.
           </p>
           <nav className="flex gap-4 mt-4 sm:mt-0">
             <Link
