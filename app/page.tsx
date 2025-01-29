@@ -1,13 +1,16 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { ArrowRight } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ArrowRight } from "lucide-react";
 
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-blue-50 to-white dark:from-blue-900 dark:to-gray-900">
       <header className="px-4 lg:px-6 h-14 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-blue-600 dark:text-blue-400">
+        <Link
+          href="/"
+          className="text-xl font-bold text-blue-600 dark:text-blue-400"
+        >
           Navik
         </Link>
         <nav className="flex gap-4 sm:gap-6">
@@ -30,15 +33,20 @@ export default function LandingPage() {
           <div className="container mx-auto flex flex-col items-center text-center">
             <div className="space-y-4 max-w-3xl">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 p-3">
-                The Future of Group Riding is Coming
+                The Future of Group Riding is Coming!
               </h1>
               <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl dark:text-gray-300">
-                Navik is revolutionizing the way motorcycle enthusiasts connect, plan, and ride together. Stay tuned for
-                an experience that will transform your adventures on two wheels.
+                Navik is revolutionizing the way motorcycle enthusiasts connect,
+                plan, and ride together. Stay tuned for an experience that will
+                transform your adventures on two wheels.
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Input type="email" placeholder="Enter your email" className="max-w-sm" />
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                className="max-w-sm"
+              />
               <Button className="bg-blue-600 hover:bg-blue-700 text-white">
                 Get Notified
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -49,26 +57,40 @@ export default function LandingPage() {
             </p>
           </div>
         </section>
-        <section id="about" className="w-full py-12 md:py-24 bg-blue-100/50 dark:bg-blue-900/20">
+        <section
+          id="about"
+          className="w-full py-12 md:py-24 bg-blue-100/50 dark:bg-blue-900/20"
+        >
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400">Why Navik?</h2>
+            <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400">
+              Why Navik?
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Stay Connected</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                  Stay Connected
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Never lose touch with your riding group, no matter where the road takes you.
+                  Never lose touch with your riding group, no matter where the
+                  road takes you.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Plan Together</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                  Plan Together
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Collaborate on routes, pit stops, and adventures with intuitive group planning tools.
+                  Collaborate on routes, pit stops, and adventures with
+                  intuitive group planning tools.
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Ride Smarter</h3>
+                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                  Ride Smarter
+                </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Access real-time data and insights to enhance your riding experience.
+                  Access real-time data and insights to enhance your riding
+                  experience.
                 </p>
               </div>
             </div>
@@ -76,10 +98,13 @@ export default function LandingPage() {
         </section>
         <section id="contact" className="w-full py-12 md:py-24">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400">Ready to Transform Your Rides?</h2>
+            <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-blue-400">
+              Ready to Transform Your Rides?
+            </h2>
             <p className="max-w-2xl mx-auto mb-8 text-gray-600 dark:text-gray-300">
-              Join our waitlist and be among the first riders to experience Navik. Whether you're a weekend warrior or a
-              long-distance enthusiast, we're gearing up to elevate your journeys.
+              Join our waitlist and be among the first riders to experience
+              Navik. Whether you're a weekend warrior or a long-distance
+              enthusiast, we're gearing up to elevate your journeys.
             </p>
             <Button className="bg-blue-600 hover:bg-blue-700 text-white">
               Join the Waitlist
@@ -90,7 +115,9 @@ export default function LandingPage() {
       </main>
       <footer className="py-6 px-4 border-t border-gray-200 dark:border-gray-800">
         <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400">© 2024 Navik. All rights reserved.</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            © 2024 Navik. All rights reserved.
+          </p>
           <nav className="flex gap-4 mt-4 sm:mt-0">
             <Link
               className="text-sm text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"
@@ -108,6 +135,5 @@ export default function LandingPage() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
-
