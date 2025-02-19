@@ -21,6 +21,16 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  headers: [
+    {
+      key: "Access-Control-Allow-Origin",
+      value: "getnavik.com"
+    },
+    {
+      key: "Access-Control-Allow-Methods",
+      value: "GET,POST"
+    }
+  ]
 }
 
 mergeConfig(nextConfig, userConfig)
