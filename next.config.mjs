@@ -1,6 +1,6 @@
-let userConfig = undefined
+let userConfig = undefined;
 try {
-  userConfig = await import('./v0-user-next.config')
+  userConfig = await import("./v0-user-next.config");
 } catch (e) {
   // ignore error
 }
@@ -21,38 +21,44 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  headers: [
+  headers: async () =>  [
     {
-      key: "Access-Control-Allow-Origin",
-      value: "getnavik.com"
-    },
-    {
-      key: "Access-Control-Allow-Methods",
-      value: "GET,POST"
-    }
-  ]
-}
+      headers: [
+        {
 
-mergeConfig(nextConfig, userConfig)
+          key: "Access-Control-Allow-Origin",
+          value: "getnavik.com",
+        },
+        {
+          key: "Access-Control-Allow-Methods",
+          value: "GET,POST",
+        },
+      ],
+      source: "/api/(.*)"
+    },
+  ],
+};
+
+mergeConfig(nextConfig, userConfig);
 
 function mergeConfig(nextConfig, userConfig) {
   if (!userConfig) {
-    return
+    return;
   }
 
   for (const key in userConfig) {
     if (
-      typeof nextConfig[key] === 'object' &&
+      typeof nextConfig[key] === "object" &&
       !Array.isArray(nextConfig[key])
     ) {
       nextConfig[key] = {
         ...nextConfig[key],
         ...userConfig[key],
-      }
+      };
     } else {
-      nextConfig[key] = userConfig[key]
+      nextConfig[key] = userConfig[key];
     }
   }
 }
 
-export default nextConfig
+export default nextConfig;

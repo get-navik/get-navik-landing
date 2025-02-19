@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import "@fontsource/geist-sans";
+import { WaitList } from "@/components/waitlist";
 
 export default function LandingPage() {
   return (
@@ -30,7 +31,10 @@ export default function LandingPage() {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <header className="container mx-auto px-4 lg:px-6 h-20 flex items-center justify-between">
+      <header
+        className="container mx-auto px-4 lg:px-6 h-20 flex items-center justify-between"
+        id="navbar"
+      >
         <Link
           href="/"
           className="text-xl font-bold text-[#0a1128] dark:text-blue-400"
@@ -70,17 +74,11 @@ export default function LandingPage() {
                 transform your adventures on two wheels.
               </p>
             </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="max-w-sm"
-              />
-              <Button className="bg-[#0a1128] hover:[#0a1128] text-white">
-                Get Notified
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+            <section id="wait_list">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <WaitList />
+              </div>
+            </section>
             <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
               Be the first to know when we launch. No spam, we promise.
             </p>
@@ -135,10 +133,12 @@ export default function LandingPage() {
               Navik. Whether you're a weekend warrior or a long-distance
               enthusiast, we're gearing up to elevate your journeys.
             </p>
-            <Button className="bg-[#0a1128] hover:[#0a1128] text-white">
-              Join the Waitlist
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href="/#navbar">
+              <Button className="bg-[#0a1128] hover:[#0a1128] text-white">
+                Join the Waitlist
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
