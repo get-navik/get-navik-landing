@@ -5,7 +5,6 @@ import { ArrowRight } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import "@fontsource/geist-sans";
-import { Metadata } from "next";
 
 export default function LandingPage() {
   return (
